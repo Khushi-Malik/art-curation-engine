@@ -1,6 +1,6 @@
-"use client";  
-import styles from '../styles/HomePage.module.css'
+"use client";
 
+import { ArtSearchBar } from "./components/ArtSearchBar";
 
 export default function HomePage() {
   return (
