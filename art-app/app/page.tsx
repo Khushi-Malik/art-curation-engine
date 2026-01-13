@@ -1,7 +1,7 @@
-import Image from "next/image";
+import HomePage from "../components/HomePage";
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold">Welcome to the Art Curation Engine</h1>
-  );
+    <HomePage />
+  )
 }
