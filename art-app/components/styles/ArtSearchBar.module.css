@@ -1,0 +1,109 @@
+.container {
+  padding: 2rem 1rem;
+}
+
+.searchContainer {
+  width: 100%; /* Fixed from 500% */
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchWrapper {
+  position: relative; /* Added - needed for absolute positioned glow */
+}
+
+.searchGlow {
+  position: absolute;
+  inset: -0.25rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border-radius: 1rem;
+  filter: blur(1.5rem);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none; /* Added - allows clicking through the glow */
+}
+
+.searchWrapper:hover .searchGlow { /* Fixed selector */
+  opacity: 1;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: white;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.searchIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(107, 114, 128);
+  margin-left: 0.75rem;
+}
+
+.searchInput {
+  flex: 1;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: rgb(156, 163, 175);
+}
+
+.exploreButton {
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #661121;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer; /* Added */
+}
+
+.exploreButton:hover{
+  background-color: #b81b38;
+}
+
+.suggestionsContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.suggestionLabel {
+  color: rgb(75, 85, 99);
+  font-size: 0.875rem;
+}
+
+.suggestionButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: rgb(55, 65, 81);
+  background-color: rgb(243, 244, 246);
+  border-radius: 9999px;
+  transition: all 0.2s;
+  border: none; /* Added */
+  cursor: pointer; /* Added */
+}
+
+.suggestionButton:hover {
+  background-color: rgb(229, 231, 235);
+  transform: scale(1.05);
+}
