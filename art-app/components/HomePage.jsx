@@ -2,6 +2,6 @@
 
 export default function HomePage() {
   return (
-        <h1 className="text-3xl font-bold">Welcome to the Art Curation Engine</h1>
+        <h1 className="title">Welcome to the Art Curation Engine</h1>
   );
 }
